@@ -17,6 +17,7 @@ class Login: UIViewController {
 //      presentAuthUIViewController()
         // Do any additional setup after loading the view.
     }
+    
     func presentAuthUIViewController() {
         let config = AWSAuthUIConfiguration()
         config.addSignInButtonView(class: AWSFacebookSignInButton.self)
