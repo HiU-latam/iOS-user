@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import SwiftGifOrigin
 
 class ViewController: UIViewController {
-    @IBOutlet var splashView: UIImageView! 
+    @IBOutlet var splashView: UIImageView!
+    var counter = 0
+    var timer = Timer()
     override func viewDidLoad() {
        super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         splashView.animationRepeatCount=1
         let jeremyGif = UIImage.gif(name: "gif_splash")
+        
         
         
         
@@ -35,14 +39,16 @@ class ViewController: UIViewController {
         splashView.animationRepeatCount = 1
         // Start the animation
         splashView.startAnimating()
+        
 
 
 //
 //        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Login") as! Login
 //        self.present(vc, animated: true, completion: nil)
         
-        let viewController:UIViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Login")   
-        self.present(viewController, animated: false, completion: nil)
+        
+        NSLog("%@", "Close")
+        runTimer()
 //        let storyboard = UIStoryboard(name: "Login", bundle: nil)
 //        let controller = storyboard.instantiateViewController(withIdentifier: "Login")
 //        self.present(controller, animated: true, completion: nil)
@@ -52,6 +58,23 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func runTimer() {
+        NSLog("runTimer")
+        timer.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+    }
+    
+    func update(){
+        counter += 1
+        NSLog(timer.isValid ? "YES" : "NO")
+        NSLog("\(counter)")
+        if counter >= 18 {
+            timer.invalidate()
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login")
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
 
 

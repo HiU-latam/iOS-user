@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  HiU
+
+  Created by Shiny Solutions on 1/9/18.
+  Copyright © 2018 developer. All rights reserved.
+*/
+"login_with" = "Login with";
+"sign_in" = "Sign In";
+"new_here" = "New here";
+"sign_up" = "Sign Up";
