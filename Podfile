@@ -12,5 +12,5 @@ target 'HiU' do
   pod 'AWSFacebookSignIn', '~> 2.6.1'
   pod 'AWSUserPoolsSignIn', '~> 2.6.1'
   pod 'SwiftGifOrigin', '~> 1.6.1'
-
+  pod 'SlideMenuControllerSwift'
 end

@@ -9,6 +9,7 @@
 import UIKit
 import AWSAuthUI
 import AWSFacebookSignIn
+import SlideMenuControllerSwift
 
 class Login: UIViewController {
     
@@ -30,10 +31,23 @@ class Login: UIViewController {
         super.viewDidLoad()
         NSLog("%@", "Login - viewDidLoad")
         
-        resetSize()
+        initView()
 //      presentAuthUIViewController()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func presentAuthUIViewController() {
         let config = AWSAuthUIConfiguration()
         config.addSignInButtonView(class: AWSFacebookSignInButton.self)
@@ -62,7 +76,7 @@ class Login: UIViewController {
         })
     }
     
-    func resetSize() {
+    func initView() {
         let screenSize = UIScreen.main.bounds
         let screenWidth =  screenSize.width
         let screenheight =  screenSize.height
@@ -106,7 +120,7 @@ class Login: UIViewController {
         signInEmailTextField.leftViewMode = UITextFieldViewMode.always
         
         signInPasswordTextField.frame = CGRect(x: 40, y: signInEmailTextField.frame.origin.y + signInEmailTextField.frame.size.height + 20, width:(screenWidth - 40), height:40)
-        signInPasswordTextField.backgroundColor = UIColorFromRGB(rgbValue: 0xcf00d2)
+        signInPasswordTextField.backgroundColor = Helper.UIColorFromRGB(rgbValue: 0xcf00d2)
         signInPasswordTextField.layer.shadowColor = UIColor.black.cgColor
         signInPasswordTextField.layer.shadowOpacity = 1
         signInPasswordTextField.layer.shadowOffset = CGSize.zero
@@ -125,6 +139,7 @@ class Login: UIViewController {
         
         signInLoginWithLabel.frame = CGRect(x: ((screenWidth / 2) - 80), y: signInPasswordTextField.frame.origin.y + signInPasswordTextField.frame.size.height + 20, width: 160, height: 20)
         signInLoginWithLabel.text = NSLocalizedString("login_with", comment: "")
+        signInLoginWithLabel.font = Fonts.Small
         signInLoginWithLabel.textColor = UIColor.white
         signInLoginWithLabel.contentMode = UIViewContentMode.center
         
@@ -151,14 +166,16 @@ class Login: UIViewController {
         
         signInButton.frame = CGRect(x: (screenWidth / 2) - 80, y: signInTwitterButton!.frame.origin.y + signInTwitterButton!.frame.size.height + 20, width:160, height:30)
         signInButton.setTitle(NSLocalizedString("sign_in", comment: ""), for: UIControlState.normal)
+        signInButton.titleLabel?.font = Fonts.Small
         signInButton.setTitleColor(UIColor.white, for: UIControlState.normal)
-        signInButton.backgroundColor = UIColorFromRGB(rgbValue: 0xcf00d2)
+        signInButton.backgroundColor = Helper.UIColorFromRGB(rgbValue: 0xcf00d2)
+        signInButton.addTarget(self, action: #selector(signInButtonOnClick), for: .touchUpInside)
         
         signUpButton.frame = CGRect(x: (screenWidth / 2) - 80, y: (screenheight - 30), width:160, height:10)
         let attrTextNewhere = NSMutableAttributedString(string: String(format:"%@?", NSLocalizedString("new_here", comment: "")))
         attrTextNewhere.addAttribute(NSForegroundColorAttributeName, value: UIColor.white, range: NSMakeRange(0, attrTextNewhere.length))
         let attrTextSignUp = NSMutableAttributedString(string: NSLocalizedString("sign_up", comment: ""))
-        attrTextSignUp.addAttribute(NSForegroundColorAttributeName, value: UIColorFromRGB(rgbValue: 0xcf00d2), range: NSMakeRange(0, attrTextSignUp.length))
+        attrTextSignUp.addAttribute(NSForegroundColorAttributeName, value: Helper.UIColorFromRGB(rgbValue: 0xcf00d2), range: NSMakeRange(0, attrTextSignUp.length))
         let attributedText = NSMutableAttributedString()
         attributedText.append(attrTextNewhere)
         attributedText.append(attrTextSignUp)
@@ -166,16 +183,17 @@ class Login: UIViewController {
         paragraphStyle.alignment = .center
         attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedText.length))
         signUpButton.setAttributedTitle(attributedText, for: .normal)
+        signUpButton.titleLabel?.font = Fonts.Small
         
         
     }
     
-    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
+    func signInButtonOnClick(sender: UIButton!) {
+        NSLog("signInButtonOnClick", "")
+        let leftMenuviewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MenuViewController")
+        let mainMenuviewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController")
+        let slideMenuController = SlideMenuController(mainViewController: mainMenuviewController, leftMenuViewController: leftMenuviewController)
+        NSLog("signInButtonOnClick - %@", slideMenuController)
+        self.navigationController?.pushViewController(slideMenuController, animated: true)
     }
 }

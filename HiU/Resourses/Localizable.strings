@@ -9,3 +9,9 @@
 "sign_in" = "Sign In";
 "new_here" = "New here";
 "sign_up" = "Sign Up";
+"dashboard" = "Dashboard";
+"search" = "Search";
+"name" = "Name";
+"category" = "Category";
+"country" = "Country";
+"select_celebrity" = "Select your Celebrity";

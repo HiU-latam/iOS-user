@@ -54,6 +54,18 @@ class ViewController: UIViewController {
 //        self.present(controller, animated: true, completion: nil)
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -73,7 +85,7 @@ class ViewController: UIViewController {
         if counter >= 18 {
             timer.invalidate()
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login")
-            self.present(viewController, animated: true, completion: nil)
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
 

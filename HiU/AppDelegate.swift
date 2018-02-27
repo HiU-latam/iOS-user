@@ -11,6 +11,7 @@ import AWSAuthCore
 import AWSUserPoolsSignIn
 import AWSFacebookSignIn
 import AWSPinpoint
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
