@@ -13,4 +13,7 @@ target 'HiU' do
   pod 'AWSUserPoolsSignIn', '~> 2.6.1'
   pod 'SwiftGifOrigin', '~> 1.6.1'
   pod 'SlideMenuControllerSwift'
+  pod 'TLYShyNavBar'
+  pod 'MGCollapsingHeader'
+  pod 'DropDown'
 end

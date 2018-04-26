@@ -15,3 +15,10 @@
 "category" = "Category";
 "country" = "Country";
 "select_celebrity" = "Select your Celebrity";
+"message" = "Message";
+"complete_form" = "Complete the form with necessary data.";
+"lucky_one" = "Who is the lucky one?";
+"your_words" = "Your Words";
+"less_characters" = "Less that xxxxx characters";
+"value" = "Value";
+"next" = "Next";

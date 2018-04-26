@@ -8,10 +8,12 @@
 
 import UIKit
 import SlideMenuControllerSwift
+import TLYShyNavBar
+
 
 class DashboardViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    
+    static let TAG = "DashboardViewController"
     
     var navigationBarLabel = UILabel.init()
     var leftBarButtonItem = UIBarButtonItem.init()
@@ -22,6 +24,8 @@ class DashboardViewController: UIViewController, UISearchResultsUpdating, UISear
     let tabBarItemTitles = [NSLocalizedString("name", comment: ""), NSLocalizedString("category", comment: ""), NSLocalizedString("country", comment: "")]
     lazy var searchBar = UISearchBar(frame: CGRect.zero)
     var dashboardModal = [DashboardModal]()
+    
+    
     
     @IBOutlet weak var viewCelebrity: UIView!
     @IBOutlet weak var viewTabBar: UIView!
@@ -47,11 +51,13 @@ class DashboardViewController: UIViewController, UISearchResultsUpdating, UISear
         prepareDashboardData()
         
         prepareTableView()
+        
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+        navigationBarLabel.removeFromSuperview()
         
     }
 
@@ -68,19 +74,21 @@ class DashboardViewController: UIViewController, UISearchResultsUpdating, UISear
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        NSLog("%@", "DashboardViewController - prepare")
     }
     
     
     func prepareNavigation() {
         NSLog("%@", "DashboardViewController - prepareNavigation")
         
-        self.navigationController?.navigationBar.tintColor = Helper.UIColorFromRGB(rgbValue: 0xcf00d2)
+        self.slideMenuController()?.navigationController?.navigationBar.tintColor = Helper.UIColorFromRGB(rgbValue: 0xcf00d2)
         NSLog("%@", "DashboardViewController - prepareNavigation - set tintcolor")
-        self.navigationController?.navigationBar.barTintColor = Helper.UIColorFromRGB(rgbValue: 0xcf00d2)
+        self.slideMenuController()?.navigationController?.navigationBar.barTintColor = Helper.UIColorFromRGB(rgbValue: 0xcf00d2)
         
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        self.slideMenuController()?.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         
         if let navigationBar = self.slideMenuController()?.navigationController?.navigationBar {
+            NSLog("%@%@", "DashboardViewController - prepareNavigation - set tintcolor", navigationBar .isKind(of: SlideMenuController.self) ? "Yes" : "No")
             let firstFrame = CGRect(x: (navigationBar.frame.size.width/2) - 80, y:(navigationBar.frame.size.height/2) - 10, width: 160, height:20)
             navigationBarLabel = UILabel(frame: firstFrame)
             navigationBarLabel.text = NSLocalizedString("dashboard", comment: "")
@@ -167,6 +175,7 @@ class DashboardViewController: UIViewController, UISearchResultsUpdating, UISear
         
     }
     
+    // MARK: - Tab Bar
     func prepareTabBar() {
         NSLog("prepareTabBar", "")
         let screenSize = UIScreen.main.bounds
@@ -230,6 +239,7 @@ class DashboardViewController: UIViewController, UISearchResultsUpdating, UISear
         
     }
     
+    // MARK: - Tableview
     func prepareTableView()  {
         NSLog("prepareTableView", "")
         let screenSize = UIScreen.main.bounds
@@ -241,14 +251,15 @@ class DashboardViewController: UIViewController, UISearchResultsUpdating, UISear
         
     }
     
+    // MARK: - Prepare dummy data
     func prepareDashboardData()  {
         NSLog("prepareTableView", "")
         
         
-        let dashboardAnderson = DashboardModal.init(celebrityImage: "andres_cepeda", celebrityName: "Andres Cepeda", celebrityCategory: "Musico", celebrityRating: "6.2", celebrityRatingImage: "list_glow_bar")
+        let dashboardAnderson = DashboardModal(celebrityImage: "andres_cepeda", celebrityName: "Andres Cepeda", celebrityCategory: "Musico", celebrityRating: "6.2", celebrityRatingImage: "list_glow_bar")
         dashboardModal.append(dashboardAnderson)
         
-        let dashboardScarlett = DashboardModal.init(celebrityImage: "scarlett_johansson", celebrityName: "Scarlett Johansson", celebrityCategory: "Actriz", celebrityRating: "7.5", celebrityRatingImage: "list_glow_bar_copia")
+        let dashboardScarlett = DashboardModal(celebrityImage: "scarlett_johansson", celebrityName: "Scarlett Johansson", celebrityCategory: "Actriz", celebrityRating: "7.5", celebrityRatingImage: "list_glow_bar_copia")
         dashboardModal.append(dashboardScarlett)
     }
     
@@ -281,6 +292,15 @@ class DashboardViewController: UIViewController, UISearchResultsUpdating, UISear
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 210.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NSLog("%@ - didSelectRowAt", DashboardViewController.TAG)
+        
+        let messageViewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MessageViewController")
+        Shared.shared.dashboardModalData = dashboardModal[indexPath.row]
+        self.navigationController?.pushViewController(messageViewController, animated: true)
+        
     }
 
 }

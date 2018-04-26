@@ -8,12 +8,21 @@
 
 import UIKit
 
-class DashboardModal: NSObject {
+struct DashboardModal {
     var celebrityImage: String
     var celebrityName: String
     var celebrityCategory: String
     var celebrityRating: String
     var celebrityRatingImage: String
+}
+
+/*class DashboardModal: NSObject {
+    var celebrityImage: String
+    var celebrityName: String
+    var celebrityCategory: String
+    var celebrityRating: String
+    var celebrityRatingImage: String
+    
     
     init(celebrityImage: String, celebrityName: String, celebrityCategory: String, celebrityRating: String, celebrityRatingImage: String) {
         self.celebrityImage = celebrityImage
@@ -26,4 +35,4 @@ class DashboardModal: NSObject {
     
     
     
-}
+}*/
