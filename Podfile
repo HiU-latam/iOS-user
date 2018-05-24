@@ -16,4 +16,5 @@ target 'HiU' do
   pod 'TLYShyNavBar'
   pod 'MGCollapsingHeader'
   pod 'DropDown'
+  pod 'Koloda', '~> 4.3.1'
 end

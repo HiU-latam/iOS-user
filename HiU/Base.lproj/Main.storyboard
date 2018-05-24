@@ -733,9 +733,94 @@
             </objects>
             <point key="canvasLocation" x="2042" y="28"/>
         </scene>
+        <!--Charity View Controller-->
+        <scene sceneID="tgZ-st-bR3">
+            <objects>
+                <viewController storyboardIdentifier="CharityViewController" id="cY6-t6-5nP" customClass="CharityViewController" customModule="HiU" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oZd-dl-Uzy"/>
+                        <viewControllerLayoutGuide type="bottom" id="pzu-dd-zzp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wn1-2P-tzd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvr-BG-Cap">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSG-Wu-TcK">
+                                        <rect key="frame" x="39" y="15" width="242" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="uSG-Wu-TcK" firstAttribute="leading" secondItem="xvr-BG-Cap" secondAttribute="leading" constant="39" id="4LD-aj-sCc"/>
+                                    <constraint firstItem="uSG-Wu-TcK" firstAttribute="centerY" secondItem="xvr-BG-Cap" secondAttribute="centerY" id="6id-Vr-r3s"/>
+                                    <constraint firstItem="uSG-Wu-TcK" firstAttribute="top" secondItem="xvr-BG-Cap" secondAttribute="top" constant="15" id="Okt-xw-7UJ"/>
+                                    <constraint firstItem="uSG-Wu-TcK" firstAttribute="centerX" secondItem="xvr-BG-Cap" secondAttribute="centerX" id="wB4-5N-G8p"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aF-gz-XcB" customClass="CustomKolodaView" customModule="HiU" customModuleProvider="target">
+                                <rect key="frame" x="16" y="58" width="288" height="255"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cy5-Mj-ULO">
+                                <rect key="frame" x="151" y="325" width="18" height="22"/>
+                                <state key="normal" image="charity_non_favoriate"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ng-52-0De">
+                                <rect key="frame" x="73" y="355" width="203" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="MO6-wn-8A1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1L-uP-Gnn">
+                                <rect key="frame" x="98" y="384" width="125" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xvr-BG-Cap" firstAttribute="leading" secondItem="Wn1-2P-tzd" secondAttribute="leading" id="4pD-VE-k4r"/>
+                            <constraint firstItem="xvr-BG-Cap" firstAttribute="centerX" secondItem="3aF-gz-XcB" secondAttribute="centerX" id="86z-rc-Fzy"/>
+                            <constraint firstItem="3aF-gz-XcB" firstAttribute="top" secondItem="xvr-BG-Cap" secondAttribute="bottom" constant="8" symbolic="YES" id="9T0-dh-G1O"/>
+                            <constraint firstItem="9ng-52-0De" firstAttribute="top" secondItem="Cy5-Mj-ULO" secondAttribute="bottom" constant="8" symbolic="YES" id="DJ3-ZX-szW"/>
+                            <constraint firstItem="h1L-uP-Gnn" firstAttribute="leading" secondItem="Wn1-2P-tzd" secondAttribute="leadingMargin" constant="82" id="HOr-WD-1Xn"/>
+                            <constraint firstItem="h1L-uP-Gnn" firstAttribute="top" secondItem="9ng-52-0De" secondAttribute="bottom" constant="8" symbolic="YES" id="I20-KW-QLO"/>
+                            <constraint firstItem="xvr-BG-Cap" firstAttribute="top" secondItem="Wn1-2P-tzd" secondAttribute="top" id="IdH-oU-NYC"/>
+                            <constraint firstItem="Cy5-Mj-ULO" firstAttribute="centerX" secondItem="h1L-uP-Gnn" secondAttribute="centerX" id="J36-Q9-qc7"/>
+                            <constraint firstItem="3aF-gz-XcB" firstAttribute="leading" secondItem="Wn1-2P-tzd" secondAttribute="leadingMargin" id="JYS-3R-GhN"/>
+                            <constraint firstAttribute="trailing" secondItem="xvr-BG-Cap" secondAttribute="trailing" id="Nql-6U-G7p"/>
+                            <constraint firstItem="9ng-52-0De" firstAttribute="leading" secondItem="Wn1-2P-tzd" secondAttribute="leadingMargin" constant="57" id="dKh-B6-Yxu"/>
+                            <constraint firstItem="Cy5-Mj-ULO" firstAttribute="top" secondItem="3aF-gz-XcB" secondAttribute="bottom" constant="12" id="oBK-b8-GOQ"/>
+                            <constraint firstItem="pzu-dd-zzp" firstAttribute="top" secondItem="h1L-uP-Gnn" secondAttribute="bottom" constant="66" id="pgf-HE-Har"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9ng-52-0De" secondAttribute="trailing" constant="28" id="sSS-sA-d71"/>
+                            <constraint firstItem="3aF-gz-XcB" firstAttribute="centerX" secondItem="Cy5-Mj-ULO" secondAttribute="centerX" id="tII-cH-NXL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonFavorite" destination="Cy5-Mj-ULO" id="uzy-Or-vG5"/>
+                        <outlet property="buttonNext" destination="h1L-uP-Gnn" id="YJz-U0-dDn"/>
+                        <outlet property="labelDesiredCharity" destination="uSG-Wu-TcK" id="nD1-bf-k82"/>
+                        <outlet property="labelFavorite" destination="9ng-52-0De" id="Ce9-YG-MOO"/>
+                        <outlet property="viewDesiredCharity" destination="xvr-BG-Cap" id="1GG-WF-srR"/>
+                        <outlet property="viewKolda" destination="3aF-gz-XcB" id="VlK-sH-ctS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tnL-kz-Ht8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1237.5" y="27.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="andres_cepeda" width="250" height="144"/>
+        <image name="charity_non_favoriate" width="18" height="17"/>
         <image name="icon_login" width="54" height="31"/>
         <image name="list_add" width="18" height="14"/>
         <image name="list_cloud" width="20" height="17"/>

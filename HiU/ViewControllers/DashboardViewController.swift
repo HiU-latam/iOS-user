@@ -87,6 +87,8 @@ class DashboardViewController: UIViewController, UISearchResultsUpdating, UISear
         
         self.slideMenuController()?.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         
+        self.navigationController?.navigationBar.isTranslucent = false
+        
         if let navigationBar = self.slideMenuController()?.navigationController?.navigationBar {
             NSLog("%@%@", "DashboardViewController - prepareNavigation - set tintcolor", navigationBar .isKind(of: SlideMenuController.self) ? "Yes" : "No")
             let firstFrame = CGRect(x: (navigationBar.frame.size.width/2) - 80, y:(navigationBar.frame.size.height/2) - 10, width: 160, height:20)

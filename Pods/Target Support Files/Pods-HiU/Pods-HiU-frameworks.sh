@@ -114,10 +114,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MGCollapsingHeader/MGCollapsingHeader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TLYShyNavBar/TLYShyNavBar.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/pop/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework"
@@ -132,10 +134,12 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MGCollapsingHeader/MGCollapsingHeader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TLYShyNavBar/TLYShyNavBar.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/pop/pop.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

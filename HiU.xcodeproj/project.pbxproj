@@ -52,6 +52,7 @@
 		860149A82071039D008BE48C /* MessageInitialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860149A72071039D008BE48C /* MessageInitialTableViewCell.swift */; };
 		860149AA20710E91008BE48C /* MessageLuckyNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860149A920710E91008BE48C /* MessageLuckyNameTableViewCell.swift */; };
 		861842BF20821E72004E76FB /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861842BE20821E72004E76FB /* MessageTableViewCell.swift */; };
+		86199A2520AE0C34002295D1 /* CharityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86199A2420AE0C34002295D1 /* CharityViewController.swift */; };
 		8696B2B820926AF0002F1C31 /* MessageNextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696B2B720926AF0002F1C31 /* MessageNextTableViewCell.swift */; };
 		86B4546520040F1000BD6133 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86B4546420040F1000BD6133 /* Localizable.strings */; };
 		86B5DBE7208FC5C000601CC0 /* MessageValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5DBE6208FC5C000601CC0 /* MessageValueTableViewCell.swift */; };
@@ -65,6 +66,9 @@
 		86BC19D82045DF5000B84785 /* DashboardNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC19D32045DF5000B84785 /* DashboardNameViewController.swift */; };
 		86BC19DA2045E3CC00B84785 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC19D92045E3CC00B84785 /* Helper.swift */; };
 		86C8FE05204F21F500D5B9D6 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C8FE04204F21F500D5B9D6 /* MessageViewController.swift */; };
+		86F937B020B4A50D008065CC /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F937AD20B4A50D008065CC /* CustomOverlayView.swift */; };
+		86F937B120B4A50D008065CC /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F937AE20B4A50D008065CC /* CustomKolodaView.swift */; };
+		86F937B220B4A50D008065CC /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F937AF20B4A50D008065CC /* CustomOverlayView.xib */; };
 		86F9A677205B51340022427B /* FacebookBarBehaviorDefiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9A66F205B51340022427B /* FacebookBarBehaviorDefiner.swift */; };
 		86F9A678205B51340022427B /* FlexibleHeightBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9A671205B51340022427B /* FlexibleHeightBar.swift */; };
 		86F9A679205B51340022427B /* FlexibleHeightBarBehaviorDefiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F9A672205B51340022427B /* FlexibleHeightBarBehaviorDefiner.swift */; };
@@ -149,6 +153,7 @@
 		860149A72071039D008BE48C /* MessageInitialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInitialTableViewCell.swift; sourceTree = "<group>"; };
 		860149A920710E91008BE48C /* MessageLuckyNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLuckyNameTableViewCell.swift; sourceTree = "<group>"; };
 		861842BE20821E72004E76FB /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		86199A2420AE0C34002295D1 /* CharityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityViewController.swift; sourceTree = "<group>"; };
 		8696B2B720926AF0002F1C31 /* MessageNextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNextTableViewCell.swift; sourceTree = "<group>"; };
 		86B4546420040F1000BD6133 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		86B5DBE6208FC5C000601CC0 /* MessageValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageValueTableViewCell.swift; sourceTree = "<group>"; };
@@ -163,6 +168,9 @@
 		86BC19D92045E3CC00B84785 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		86C8FE00204F1EF700D5B9D6 /* FlexibleHeightBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexibleHeightBar.framework; path = HiU/Framework/FlexibleHeightBar.framework; sourceTree = "<group>"; };
 		86C8FE04204F21F500D5B9D6 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		86F937AD20B4A50D008065CC /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
+		86F937AE20B4A50D008065CC /* CustomKolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
+		86F937AF20B4A50D008065CC /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
 		86F9A66F205B51340022427B /* FacebookBarBehaviorDefiner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookBarBehaviorDefiner.swift; sourceTree = "<group>"; };
 		86F9A670205B51340022427B /* FlexibleHeightBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexibleHeightBar.h; sourceTree = "<group>"; };
 		86F9A671205B51340022427B /* FlexibleHeightBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexibleHeightBar.swift; sourceTree = "<group>"; };
@@ -369,6 +377,9 @@
 		86BC19CD2045DEB500B84785 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				86F937AE20B4A50D008065CC /* CustomKolodaView.swift */,
+				86F937AD20B4A50D008065CC /* CustomOverlayView.swift */,
+				86F937AF20B4A50D008065CC /* CustomOverlayView.xib */,
 				86B5DBE8208FCD0200601CC0 /* NiceButton.swift */,
 				86F9A66E205B51340022427B /* FlexibleHeightBar */,
 				86BC19D92045E3CC00B84785 /* Helper.swift */,
@@ -379,6 +390,7 @@
 		86BC19CE2045DF0F00B84785 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				86199A2420AE0C34002295D1 /* CharityViewController.swift */,
 				86BC19D02045DF5000B84785 /* DashboardCategoryViewController.swift */,
 				86BC19D22045DF5000B84785 /* DashboardCountryViewController.swift */,
 				86BC19D32045DF5000B84785 /* DashboardNameViewController.swift */,
@@ -573,6 +585,7 @@
 				8601499C2070FE86008BE48C /* Nanami-ExtraLightOblique.otf in Resources */,
 				860149992070FE86008BE48C /* Nanami-Book.otf in Resources */,
 				8601497A2070FE12008BE48C /* gif_3.gif in Resources */,
+				86F937B220B4A50D008065CC /* CustomOverlayView.xib in Resources */,
 				860149A32070FE86008BE48C /* Nanami-Regular.otf in Resources */,
 				860149812070FE12008BE48C /* logo5.gif in Resources */,
 				46E28CC81F70B8510019CE74 /* Assets.xcassets in Resources */,
@@ -653,10 +666,12 @@
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
 				"${BUILT_PRODUCTS_DIR}/MGCollapsingHeader/MGCollapsingHeader.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/TLYShyNavBar/TLYShyNavBar.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -672,10 +687,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGCollapsingHeader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TLYShyNavBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -691,6 +708,7 @@
 			files = (
 				86F9A67A205B51340022427B /* FlexibleHeightBarSubviewLayoutAttributes.swift in Sources */,
 				860149AA20710E91008BE48C /* MessageLuckyNameTableViewCell.swift in Sources */,
+				86F937B020B4A50D008065CC /* CustomOverlayView.swift in Sources */,
 				86BC19CC2045DE9F00B84785 /* DashboardTableViewCell.swift in Sources */,
 				86F9A67D205B51340022427B /* TableViewDelegateHandler.swift in Sources */,
 				8696B2B820926AF0002F1C31 /* MessageNextTableViewCell.swift in Sources */,
@@ -713,6 +731,8 @@
 				86B5DBE9208FCD0200601CC0 /* NiceButton.swift in Sources */,
 				4685FCA31F943AD60032CA66 /* Login.swift in Sources */,
 				86BC19DA2045E3CC00B84785 /* Helper.swift in Sources */,
+				86F937B120B4A50D008065CC /* CustomKolodaView.swift in Sources */,
+				86199A2520AE0C34002295D1 /* CharityViewController.swift in Sources */,
 				86F9A67C205B51340022427B /* SquareCashBarBehaviorDefiner.swift in Sources */,
 				86B5DBE7208FC5C000601CC0 /* MessageValueTableViewCell.swift in Sources */,
 			);

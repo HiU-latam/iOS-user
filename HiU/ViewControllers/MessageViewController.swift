@@ -257,6 +257,7 @@ class MessageViewController: UIViewController, MGCollapsingHeaderDelegate, UITab
             cell.buttonNext.setTitleColor(Helper.UIColorFromRGB(rgbValue: 0xFFFFFF), for: .normal)
             cell.buttonNext.titleLabel?.font = UIFont(name: "Nanami", size: 11)
             cell.buttonNext.backgroundColor = Helper.UIColorFromRGB(rgbValue: 0xcf00d2)
+            cell.buttonNext.addTarget(self, action: #selector(openToChooseCharity), for: .touchUpInside)
             
             
             return cell
@@ -314,6 +315,12 @@ class MessageViewController: UIViewController, MGCollapsingHeaderDelegate, UITab
         labelRank.text = selectedDashboardModal?.celebrityRating
         imageViewRankBG.image = UIImage(named: "list_inner_bevel")
         imageViewRank.image = UIImage(named: (selectedDashboardModal?.celebrityRatingImage)!)
+    }
+    
+    func openToChooseCharity(_ sender:UIButton) {
+        NSLog("openToChooseCharity")
+        let charityViewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CharityViewController")
+        self.navigationController?.pushViewController(charityViewController, animated: true)
     }
 
 }
