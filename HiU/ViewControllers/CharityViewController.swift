@@ -161,6 +161,14 @@ class CharityViewController: UIViewController {
     func openToPaymentDetails(_ sender:UIButton) {
         NSLog("openToPaymentDetails")
     }
+    
+    // MARK: - Button Action
+    
+    @IBAction func openPaymentDetails(_ sender: Any) {
+        NSLog("openPaymentDetails", "")
+        let charityViewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PaymentDetailViewController")
+        self.navigationController?.pushViewController(charityViewController, animated: true)
+    }
 }
 
 extension CharityViewController: KolodaViewDelegate{

@@ -27,3 +27,12 @@
 "charity_name" = "Charity Name";
 "add_to_my_charities" = "Add to my charities";
 "learn_more" = "Learn more";
+"payment_details" = "Payment Details";
+"message" = "Message";
+"charity" = "Charity";
+"total" = "Total";
+"card_number" = "Card Number";
+"exp_date" = "Exp. Date";
+"cvv" = "CVV";
+"name" = "Name";
+"done" = "Done!";

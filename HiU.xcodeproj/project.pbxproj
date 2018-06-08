@@ -52,11 +52,14 @@
 		860149A82071039D008BE48C /* MessageInitialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860149A72071039D008BE48C /* MessageInitialTableViewCell.swift */; };
 		860149AA20710E91008BE48C /* MessageLuckyNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860149A920710E91008BE48C /* MessageLuckyNameTableViewCell.swift */; };
 		861842BF20821E72004E76FB /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861842BE20821E72004E76FB /* MessageTableViewCell.swift */; };
+		86197CBA20C08EC100A4DE1D /* PaymentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86197CB920C08EC100A4DE1D /* PaymentDetailViewController.swift */; };
 		86199A2520AE0C34002295D1 /* CharityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86199A2420AE0C34002295D1 /* CharityViewController.swift */; };
+		864FA25620C7124000E1E0D3 /* PaymentDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864FA25520C7124000E1E0D3 /* PaymentDetailsTableViewCell.swift */; };
 		8696B2B820926AF0002F1C31 /* MessageNextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8696B2B720926AF0002F1C31 /* MessageNextTableViewCell.swift */; };
 		86B4546520040F1000BD6133 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86B4546420040F1000BD6133 /* Localizable.strings */; };
 		86B5DBE7208FC5C000601CC0 /* MessageValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5DBE6208FC5C000601CC0 /* MessageValueTableViewCell.swift */; };
 		86B5DBE9208FCD0200601CC0 /* NiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5DBE8208FCD0200601CC0 /* NiceButton.swift */; };
+		86BA604520C8618F00680645 /* PaymentCardDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BA604420C8618F00680645 /* PaymentCardDetailsTableViewCell.swift */; };
 		86BC19C92045DE4A00B84785 /* DashboardModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC19C82045DE4A00B84785 /* DashboardModal.swift */; };
 		86BC19CC2045DE9F00B84785 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC19CB2045DE9F00B84785 /* DashboardTableViewCell.swift */; };
 		86BC19D42045DF5000B84785 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC19CF2045DF5000B84785 /* DashboardViewController.swift */; };
@@ -66,6 +69,7 @@
 		86BC19D82045DF5000B84785 /* DashboardNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC19D32045DF5000B84785 /* DashboardNameViewController.swift */; };
 		86BC19DA2045E3CC00B84785 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BC19D92045E3CC00B84785 /* Helper.swift */; };
 		86C8FE05204F21F500D5B9D6 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C8FE04204F21F500D5B9D6 /* MessageViewController.swift */; };
+		86CC818020CB0DDC004F6AA2 /* PaymentTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC817F20CB0DDC004F6AA2 /* PaymentTypeTableViewCell.swift */; };
 		86F937B020B4A50D008065CC /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F937AD20B4A50D008065CC /* CustomOverlayView.swift */; };
 		86F937B120B4A50D008065CC /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F937AE20B4A50D008065CC /* CustomKolodaView.swift */; };
 		86F937B220B4A50D008065CC /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F937AF20B4A50D008065CC /* CustomOverlayView.xib */; };
@@ -153,11 +157,14 @@
 		860149A72071039D008BE48C /* MessageInitialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInitialTableViewCell.swift; sourceTree = "<group>"; };
 		860149A920710E91008BE48C /* MessageLuckyNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLuckyNameTableViewCell.swift; sourceTree = "<group>"; };
 		861842BE20821E72004E76FB /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		86197CB920C08EC100A4DE1D /* PaymentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailViewController.swift; sourceTree = "<group>"; };
 		86199A2420AE0C34002295D1 /* CharityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharityViewController.swift; sourceTree = "<group>"; };
+		864FA25520C7124000E1E0D3 /* PaymentDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		8696B2B720926AF0002F1C31 /* MessageNextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNextTableViewCell.swift; sourceTree = "<group>"; };
 		86B4546420040F1000BD6133 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		86B5DBE6208FC5C000601CC0 /* MessageValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageValueTableViewCell.swift; sourceTree = "<group>"; };
 		86B5DBE8208FCD0200601CC0 /* NiceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiceButton.swift; sourceTree = "<group>"; };
+		86BA604420C8618F00680645 /* PaymentCardDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		86BC19C82045DE4A00B84785 /* DashboardModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardModal.swift; sourceTree = "<group>"; };
 		86BC19CB2045DE9F00B84785 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
 		86BC19CF2045DF5000B84785 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +175,7 @@
 		86BC19D92045E3CC00B84785 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		86C8FE00204F1EF700D5B9D6 /* FlexibleHeightBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexibleHeightBar.framework; path = HiU/Framework/FlexibleHeightBar.framework; sourceTree = "<group>"; };
 		86C8FE04204F21F500D5B9D6 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		86CC817F20CB0DDC004F6AA2 /* PaymentTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTypeTableViewCell.swift; sourceTree = "<group>"; };
 		86F937AD20B4A50D008065CC /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
 		86F937AE20B4A50D008065CC /* CustomKolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
 		86F937AF20B4A50D008065CC /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
@@ -370,6 +378,9 @@
 				861842BE20821E72004E76FB /* MessageTableViewCell.swift */,
 				86B5DBE6208FC5C000601CC0 /* MessageValueTableViewCell.swift */,
 				8696B2B720926AF0002F1C31 /* MessageNextTableViewCell.swift */,
+				864FA25520C7124000E1E0D3 /* PaymentDetailsTableViewCell.swift */,
+				86BA604420C8618F00680645 /* PaymentCardDetailsTableViewCell.swift */,
+				86CC817F20CB0DDC004F6AA2 /* PaymentTypeTableViewCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -397,6 +408,7 @@
 				86BC19CF2045DF5000B84785 /* DashboardViewController.swift */,
 				86BC19D12045DF5000B84785 /* MenuViewController.swift */,
 				86C8FE04204F21F500D5B9D6 /* MessageViewController.swift */,
+				86197CB920C08EC100A4DE1D /* PaymentDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -707,7 +719,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				86F9A67A205B51340022427B /* FlexibleHeightBarSubviewLayoutAttributes.swift in Sources */,
+				86CC818020CB0DDC004F6AA2 /* PaymentTypeTableViewCell.swift in Sources */,
+				86BA604520C8618F00680645 /* PaymentCardDetailsTableViewCell.swift in Sources */,
 				860149AA20710E91008BE48C /* MessageLuckyNameTableViewCell.swift in Sources */,
+				86197CBA20C08EC100A4DE1D /* PaymentDetailViewController.swift in Sources */,
 				86F937B020B4A50D008065CC /* CustomOverlayView.swift in Sources */,
 				86BC19CC2045DE9F00B84785 /* DashboardTableViewCell.swift in Sources */,
 				86F9A67D205B51340022427B /* TableViewDelegateHandler.swift in Sources */,
@@ -728,6 +743,7 @@
 				86F9A677205B51340022427B /* FacebookBarBehaviorDefiner.swift in Sources */,
 				46E28CC11F70B8510019CE74 /* AppDelegate.swift in Sources */,
 				861842BF20821E72004E76FB /* MessageTableViewCell.swift in Sources */,
+				864FA25620C7124000E1E0D3 /* PaymentDetailsTableViewCell.swift in Sources */,
 				86B5DBE9208FCD0200601CC0 /* NiceButton.swift in Sources */,
 				4685FCA31F943AD60032CA66 /* Login.swift in Sources */,
 				86BC19DA2045E3CC00B84785 /* Helper.swift in Sources */,
