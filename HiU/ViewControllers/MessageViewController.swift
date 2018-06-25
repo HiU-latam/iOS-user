@@ -12,7 +12,7 @@ import MGCollapsingHeader
 
 class MessageViewController: UIViewController, MGCollapsingHeaderDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    
+    //MARK: DECLARATION
     var navigationBarLabel = UILabel.init()
     var leftBackBarButtonItem = UIBarButtonItem.init()
     var rightBarButtonItem = UIBarButtonItem.init()
@@ -20,11 +20,11 @@ class MessageViewController: UIViewController, MGCollapsingHeaderDelegate, UITab
     lazy var searchBar = UISearchBar(frame: CGRect.zero)
     var searchPressed = false
     
-    
-    
-    
+    //MARK: ASSOCIATION
     @IBOutlet weak var mgCollapsingHeaderView: MGCollapsingHeaderView!
     @IBOutlet weak var mgCollapsingHeaderViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var headerTop: NSLayoutConstraint!
+    @IBOutlet weak var tableTop: NSLayoutConstraint!
     @IBOutlet weak var viewHeader: UIView!
     @IBOutlet weak var tableViewMessage: UITableView!
     @IBOutlet weak var labelName: UILabel!
@@ -33,11 +33,36 @@ class MessageViewController: UIViewController, MGCollapsingHeaderDelegate, UITab
     @IBOutlet weak var imageViewRankBG: UIImageView!
     @IBOutlet weak var imageViewRank: UIImageView!
     @IBOutlet weak var labelRank: UILabel!
+    @IBOutlet weak var imageMessageNew: UIImageView!
+    
+    //MARK: OVERRIDE METHODS
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NSLog("%@", "MessageViewController - viewDidLoad")
         // Do any additional setup after loading the view.
+        
+        
+        
+        mgCollapsingHeaderView.delegate = self
+        mgCollapsingHeaderView.setCollapsingConstraint(mgCollapsingHeaderViewHeight)
+        
+        mgCollapsingHeaderView.addFadingSubview(imageViewCelebrity, fadeBy: 0.3)
+        mgCollapsingHeaderView.addFadingSubview(labelName, fadeBy: 0.3)
+        mgCollapsingHeaderView.addFadingSubview(labelCategory, fadeBy: 0.3)
+        mgCollapsingHeaderView.addFadingSubview(imageViewRank, fadeBy: 0.3)
+        mgCollapsingHeaderView.addFadingSubview(imageViewRankBG, fadeBy: 0.3)
+        mgCollapsingHeaderView.addFadingSubview(labelRank, fadeBy: 0.3)
+        mgCollapsingHeaderView.addFadingSubview(imageMessageNew, fadeBy: 0.3)
+        
+        /*let r: Double = 16.0
+         let attrs: NSArray = [MGTransform.init(attribute: MGAttributeX, byValue: CGFloat(-r)),
+         MGTransform.init(attribute: MGAttributeY, byValue: CGFloat(-r)),
+         MGTransform.init(attribute: MGAttributeWidth, byValue: CGFloat(2 * r)),
+         MGTransform.init(attribute: MGAttributeHeight, byValue: CGFloat(2 * r)),
+         MGTransform.init(attribute: MGAttributeCornerRadius, byValue: CGFloat(r)),
+         MGTransform.init(attribute: MGAttributeFontSize, byValue: CGFloat(12.0))]
+         mgCollapsingHeaderView.addTransformingSubview(<#T##view: UIView!##UIView!#>, attributes: <#T##[Any]!#>)*/
         
     }
     
@@ -47,12 +72,10 @@ class MessageViewController: UIViewController, MGCollapsingHeaderDelegate, UITab
         prepareNavigation()
         
         
-        mgCollapsingHeaderView.delegate = self
-        mgCollapsingHeaderView.setCollapsingConstraint(mgCollapsingHeaderViewHeight)
-        mgCollapsingHeaderView.addFadingSubview(viewHeader, fadeBy: 0.3)
-        
-        
         prepareHeader()
+        
+        
+        
         
     }
     
@@ -159,12 +182,21 @@ class MessageViewController: UIViewController, MGCollapsingHeaderDelegate, UITab
     }
     
     
-    
+    //MARK: SCROLL VIEW DELEGATION
     func scrollViewDidScroll(_ scrollView:UIScrollView){
-        self.mgCollapsingHeaderView.collapse(withScroll: scrollView)
+        mgCollapsingHeaderView.collapse(withScroll: scrollView)
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
     }
     
     
+    //MARK: TABLE VIEW DELEGATION
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -285,20 +317,23 @@ class MessageViewController: UIViewController, MGCollapsingHeaderDelegate, UITab
         }
     }
     
+    //MARK: MGCALLAPSING HEADER VIEW
     func headerDidCollapse(toOffset offset: Double) {
-        
+        NSLog("headerDidCollapse %.4f", offset)
     }
     
     func headerDidFinishCollapsing() {
-        
+        NSLog("headerDidFinishCollapsing", "")
+        viewHeader.backgroundColor = Helper.UIColorFromRGB(rgbValue: 0xcf00d2)
     }
     
     func headerDidExpand(toOffset offset: Double) {
-        
+        NSLog("headerDidExpand %.4f", offset)
     }
     
     func headerDidFinishExpanding() {
-        
+        NSLog("headerDidFinishExpanding")
+        viewHeader.backgroundColor = UIColor.gray.withAlphaComponent(0.75)
     }
     
     func prepareHeader() {
@@ -315,6 +350,8 @@ class MessageViewController: UIViewController, MGCollapsingHeaderDelegate, UITab
         labelRank.text = selectedDashboardModal?.celebrityRating
         imageViewRankBG.image = UIImage(named: "list_inner_bevel")
         imageViewRank.image = UIImage(named: (selectedDashboardModal?.celebrityRatingImage)!)
+        
+        viewHeader.backgroundColor = UIColor.gray.withAlphaComponent(0.75)
     }
     
     func openToChooseCharity(_ sender:UIButton) {

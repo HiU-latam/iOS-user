@@ -33,6 +33,8 @@ class CharityViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        prepareKolodaView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +44,7 @@ class CharityViewController: UIViewController {
         
         prepareViewDesiredCharity()
         
-        prepareKolodaView()
+        
         
         prepareFavorite()
         

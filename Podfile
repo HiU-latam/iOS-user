@@ -17,4 +17,5 @@ target 'HiU' do
   pod 'MGCollapsingHeader'
   pod 'DropDown'
   pod 'Koloda', '~> 4.3.1'
+  pod 'MaterialComponents/FlexibleHeader'
 end

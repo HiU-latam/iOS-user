@@ -203,6 +203,7 @@ class DashboardViewController: UIViewController, UISearchResultsUpdating, UISear
             if currentIndex == 0{
                 buttonName.isSelected = true
             }
+            buttonName.tag = currentIndex
             self.viewTabBar.addSubview(buttonName)
             currentIndex = currentIndex + 1
         }
@@ -211,15 +212,23 @@ class DashboardViewController: UIViewController, UISearchResultsUpdating, UISear
     func buttonTabClicked(sender: UIButton!){
         NSLog("buttonTabClicked", "")
         NSLog(sender.currentTitle!)
-        for tabBarItemTitle in tabBarItemTitles {
-            let isEqualTabBarTitle = (tabBarItemTitle == sender.currentTitle)
+        for tabBarItemTitle in self.viewTabBar.subviews {
+            let isEqualTabBarTitle = (tabBarItemTitle.tag == sender.tag)
+            let buttonItem = tabBarItemTitle as! UIButton
             NSLog("isEqualTabBarTitle", "")
             if (isEqualTabBarTitle){
                 NSLog("true", "")
-                sender.isSelected = true
-            }else{
+                buttonItem.isSelected = true
+            }
+        }
+        
+        for tabBarItemTitle in self.viewTabBar.subviews {
+            let isEqualTabBarTitle = (tabBarItemTitle.tag == sender.tag)
+            let buttonItem = tabBarItemTitle as! UIButton
+            NSLog("isEqualTabBarTitle", "")
+            if (!isEqualTabBarTitle){
                 NSLog("false", "")
-                sender.isSelected = false
+                buttonItem.isSelected = false
             }
         }
     }

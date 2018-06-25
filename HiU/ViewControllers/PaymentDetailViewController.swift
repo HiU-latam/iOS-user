@@ -32,10 +32,21 @@ class PaymentDetailViewController: UIViewController, MGCollapsingHeaderDelegate,
     
     @IBOutlet weak var tableViewMessage: UITableView!
 
+    
+    //MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        mgCollapsingHeaderView.delegate = self
+        mgCollapsingHeaderView.setCollapsingConstraint(mgCollapsingHeaderViewHeight)
+        mgCollapsingHeaderView.addFadingSubview(imageViewCelebrity, fadeBy: 0.3)
+        mgCollapsingHeaderView.addFadingSubview(labelName, fadeBy: 0.3)
+        mgCollapsingHeaderView.addFadingSubview(labelCategory, fadeBy: 0.3)
+        mgCollapsingHeaderView.addFadingSubview(imageViewRank, fadeBy: 0.3)
+        mgCollapsingHeaderView.addFadingSubview(imageViewRankBG, fadeBy: 0.3)
+        mgCollapsingHeaderView.addFadingSubview(labelRank, fadeBy: 0.3)
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,9 +60,7 @@ class PaymentDetailViewController: UIViewController, MGCollapsingHeaderDelegate,
         prepareNavigation()
         
         
-        mgCollapsingHeaderView.delegate = self
-        mgCollapsingHeaderView.setCollapsingConstraint(mgCollapsingHeaderViewHeight)
-        mgCollapsingHeaderView.addFadingSubview(viewHeader, fadeBy: 0.3)
+        
         
         
         prepareHeader()
@@ -154,16 +163,19 @@ class PaymentDetailViewController: UIViewController, MGCollapsingHeaderDelegate,
         
     }
     
+    //MARK: Scroll View
+    
     func scrollViewDidScroll(_ scrollView:UIScrollView){
         self.mgCollapsingHeaderView.collapse(withScroll: scrollView)
     }
     
+    //MARK: MGCollapsing UIView
     func headerDidCollapse(toOffset offset: Double) {
         
     }
     
     func headerDidFinishCollapsing() {
-        
+        viewHeader.backgroundColor = Helper.UIColorFromRGB(rgbValue: 0xcf00d2)
     }
     
     func headerDidExpand(toOffset offset: Double) {
@@ -171,7 +183,7 @@ class PaymentDetailViewController: UIViewController, MGCollapsingHeaderDelegate,
     }
     
     func headerDidFinishExpanding() {
-        
+        viewHeader.backgroundColor = UIColor.gray.withAlphaComponent(0.75)
     }
     
     func prepareHeader() {
@@ -188,6 +200,8 @@ class PaymentDetailViewController: UIViewController, MGCollapsingHeaderDelegate,
         labelRank.text = selectedDashboardModal?.celebrityRating
         imageViewRankBG.image = UIImage(named: "list_inner_bevel")
         imageViewRank.image = UIImage(named: (selectedDashboardModal?.celebrityRatingImage)!)
+        
+        viewHeader.backgroundColor = UIColor.gray.withAlphaComponent(0.75)
     }
     
     //MARK: TABLE VIEW DELEGATION METHODS

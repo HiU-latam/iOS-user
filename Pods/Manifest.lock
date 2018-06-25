@@ -31,6 +31,21 @@ PODS:
     - FBSDKCoreKit
   - Koloda (4.3.1):
     - pop (~> 1.0)
+  - MaterialComponents/FlexibleHeader (43.1.1):
+    - MaterialComponents/FlexibleHeader/ColorThemer (= 43.1.1)
+    - MaterialComponents/FlexibleHeader/Component (= 43.1.1)
+  - MaterialComponents/FlexibleHeader/ColorThemer (43.1.1):
+    - MaterialComponents/FlexibleHeader/Component
+    - MaterialComponents/Themes
+  - MaterialComponents/FlexibleHeader/Component (43.1.1):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/UIMetrics
+    - MDFTextAccessibility
+  - MaterialComponents/private/Application (43.1.1)
+  - MaterialComponents/private/UIMetrics (43.1.1):
+    - MaterialComponents/private/Application
+  - MaterialComponents/Themes (43.1.1)
+  - MDFTextAccessibility (1.2.0)
   - MGCollapsingHeader (1.0.6)
   - pop (1.0.10)
   - SlideMenuControllerSwift (4.0.0)
@@ -45,6 +60,7 @@ DEPENDENCIES:
   - AWSUserPoolsSignIn (~> 2.6.1)
   - DropDown
   - Koloda (~> 4.3.1)
+  - MaterialComponents/FlexibleHeader
   - MGCollapsingHeader
   - SlideMenuControllerSwift
   - SwiftGifOrigin (~> 1.6.1)
@@ -64,12 +80,14 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 6f139173dc63a1deaff4430a55f2fe5bb222d2af
   FBSDKLoginKit: 56a057ca6822535ea0faa25f57a7c41edb697fd4
   Koloda: 0d39b2aa188ccd1fac48d752acaf9802e683c625
+  MaterialComponents: 98a62516fedb2aa2a6efc18d74a744229f2408d3
+  MDFTextAccessibility: 94098925e0853551c5a311ce7c1ecefbe297cdb6
   MGCollapsingHeader: 82a52988e0dcdd32558e883ae4df4c9c1a1674b1
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
   SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
   TLYShyNavBar: d200e598923fbc2bd21a5c5efdfabf4898b11da0
 
-PODFILE CHECKSUM: df994e4626177a6631da2e581434fe7939315af8
+PODFILE CHECKSUM: 899a288c5710a807eb291aa01c3179d61007d623
 
 COCOAPODS: 1.3.1
